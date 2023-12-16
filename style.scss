@@ -60,6 +60,7 @@ $dark-blue-color: #397383;
     font-weight: 500;
     color: white;
     z-index: 3;
+    text-transform: capitalize;
     span {
       color: $orange-color;
     }
@@ -72,8 +73,13 @@ $dark-blue-color: #397383;
     z-index: 3;
   }
   h2 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 1.5rem !important;
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: capitalize;
+    letter-spacing: 0.05rem !important;
+    word-spacing: 0px !important;
+    line-height: 1.75rem !important;
     color: white;
     z-index: 3;
   }
@@ -114,6 +120,39 @@ $dark-blue-color: #397383;
   transform: scaleX(-1);
 }
 
+.main_text {
+  font-size: 1.25rem !important;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem !important;
+  word-spacing: 0px !important;
+  line-height: 1.75rem !important;
+}
+.sub_heading {
+  font-size: 1.75rem !important;
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02rem;
+}
+
+
+// ------Media Query for Common classes
+
+@media only screen and (max-width:767px) {
+  .dark_theme_header{
+    h1
+    {
+      font-size: 40px;
+    }
+  }
+}
+
+
+
+
+
+
 // common classes end
 
 .intro {
@@ -140,18 +179,18 @@ $dark-blue-color: #397383;
       align-items: center;
 
       h1 {
-        font-size: 90px;
-        font-weight: 600;
+        font-size: 80px;
         color: white;
-        font-family: "Forum", cursive;
-        letter-spacing: 4px;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 2px;
         text-shadow: 0px 0px 23px black;
       }
       h2 {
-        font-size: 30px;
+        font-size: 28px;
         font-family: "DM Sans", sans-serif;
         letter-spacing: 1px;
         text-shadow: 1px 1px 4px black;
+        text-transform: capitalize;
       }
       button {
         background-color: transparent;
@@ -160,12 +199,14 @@ $dark-blue-color: #397383;
         border-radius: 10px;
         box-shadow: 0px 0px 23px black;
         margin-top: 10px;
+        font-family: "Kanit", sans-serif;
 
         a {
-          font-size: 22px;
+          font-size: 20px;
           font-weight: bold;
           color: white;
           text-decoration: none;
+          letter-spacing: 2px;
         }
       }
 
@@ -272,7 +313,7 @@ $dark-blue-color: #397383;
 }
 .why_company {
   font-family: "Nunito", sans-serif;
-  padding: 4em 9em;
+  padding: 4em 8em;
   display: flex;
   flex-direction: column;
   gap: 6em;
@@ -288,7 +329,7 @@ $dark-blue-color: #397383;
       color: $dark-pink-color;
       font-weight: 600;
       letter-spacing: 3px;
-      text-transform: uppercase;
+      // text-transform: uppercase;
     }
     h3 {
       text-transform: uppercase;
@@ -309,21 +350,15 @@ $dark-blue-color: #397383;
     align-items: stretch;
     .feature {
       h1 {
-        font-size: 28px;
-        font-weight: bold;
         margin-bottom: 15px;
         color: #397383;
-      }
-      h4 {
-        font-size: 20px;
-        font-weight: bold;
       }
     }
     .feature_section {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      gap: 3em;
+      gap: 2em;
     }
     .mobile_section {
       height: 80vh;
@@ -348,12 +383,6 @@ $dark-blue-color: #397383;
             height: 100%;
           }
         }
-      }
-      .mobile {
-        // position: absolute;
-        // top: 0;
-        // height: 100%;
-        // z-index: -1;
       }
     }
   }
@@ -456,6 +485,7 @@ $dark-blue-color: #397383;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .info {
       width: 50%;
       font-family: "Nunito", sans-serif;
@@ -465,13 +495,9 @@ $dark-blue-color: #397383;
         text-transform: uppercase;
         font-size: 22px;
         font-weight: 700;
-        margin-bottom: 16px;
         color: $dark-pink-color;
       }
       h2 {
-        font-size: 40px;
-        font-weight: 700;
-        margin-bottom: 16px;
         color: #397383;
       }
       p {
@@ -493,16 +519,6 @@ $dark-blue-color: #397383;
   }
 
   .our_mission {
-    .main {
-      .info {
-        h3 {
-          font-size: 24px;
-          font-weight: 500;
-          // margin-bottom: 14px;
-          color: $purple-bg-color;
-        }
-      }
-    }
     .mission_img {
       animation: mission_animate infinite 3s ease-in;
     }
@@ -520,16 +536,6 @@ $dark-blue-color: #397383;
     }
   }
   .our_vision {
-    .main {
-      .info {
-        h3 {
-          font-size: 24px;
-          font-weight: 500;
-          // margin-bottom: 14px;
-          color: $purple-bg-color;
-        }
-      }
-    }
     .vision_img {
       animation: vision_animate infinite 3s ease-in;
     }
@@ -560,12 +566,8 @@ $dark-blue-color: #397383;
           li {
             display: flex;
             gap: 1em;
-            color: $purple-bg-color;
             margin-bottom: 1em;
-            h5 {
-              font-size: 24px;
-              font-weight: 500;
-            }
+
             img {
               width: 25px;
               height: 25px;
@@ -615,8 +617,8 @@ $dark-blue-color: #397383;
       text-align: center;
       // color: #fabf34;
       h3 {
-        font-size: 26px;
-        font-weight: 500;
+        // font-size: 26px;
+        // font-weight: 500;
         color: white;
       }
       p {
@@ -671,6 +673,7 @@ $dark-blue-color: #397383;
       font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
+      text-align: center;
     }
     h2 {
       font-size: 24px;
@@ -686,6 +689,7 @@ $dark-blue-color: #397383;
       font-weight: 600;
       opacity: 0.15 !important;
       color: #397383;
+      text-align: center;
     }
   }
   .container {
@@ -803,7 +807,6 @@ $dark-blue-color: #397383;
   .sign_up_button {
     z-index: 3;
     button {
-      // background-color: #fabf34;
       background-color: $dark-pink-color;
       color: white;
       padding: 1rem 3rem;
@@ -813,6 +816,7 @@ $dark-blue-color: #397383;
       letter-spacing: 1px;
       box-shadow: 5px 5px 21px 0 rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease-in;
+      font-family: "Kanit", sans-serif;
     }
     button:hover {
       background-color: $orange-color;
@@ -826,38 +830,43 @@ $dark-blue-color: #397383;
   align-items: center;
   padding: 4em 8em;
   position: relative;
+  justify-content: space-between;
   .app_desc {
-    width: 40%;
+    width: 50%;
     z-index: 2;
     position: relative;
 
     h1 {
       margin-bottom: 50px;
-      font-size: 60px;
-      font-weight: 500;
       span {
         color: $dark-pink-color;
       }
+      font-size: 60px;
+      color: #bc1256;
+      font-weight: 600;
+      font-family: "Nunito", sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
     h2 {
       margin-bottom: 25px;
-      font-size: 25px;
       color: #397383;
-      font-weight: 500;
     }
 
     h3 {
       margin-bottom: 60px;
-      font-size: 25px;
       color: #397383;
-      font-weight: 500;
     }
     div {
       display: flex;
       gap: 1.5rem;
+      // width: 10rem;
+      flex-direction: row;
+      width: 100%;
 
       img {
-        width: 170px;
+        width: 150px;
+        max-width: 50%;
         cursor: pointer;
         transform: scale(1);
         transition: transform 0.3s ease-in;
@@ -880,7 +889,7 @@ $dark-blue-color: #397383;
   }
   .mobile_mockup {
     z-index: 2;
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     img {
@@ -913,14 +922,6 @@ $dark-blue-color: #397383;
 
         img {
           width: 25px;
-        }
-        h3 {
-          font-size: 20px;
-          margin-bottom: 5px;
-        }
-        h4 {
-          font-size: 20px;
-          font-weight: 400;
         }
       }
     }
@@ -968,7 +969,7 @@ $dark-blue-color: #397383;
   a {
     margin-bottom: 20px;
     cursor: pointer;
-    font-size: 18px;
+    // font-size: 18px;
   }
   a:hover {
     color: #fabf34;
@@ -990,14 +991,23 @@ $dark-blue-color: #397383;
       div {
         padding: 5em 2em;
         h1 {
-          font-size: 64px;
+          font-size: 60px;
+        }
+
+        button:hover {
+          background-color: transparent;
+          padding: 10px 25px;
+          border: solid 2px white;
+          border-radius: 10px;
+          box-shadow: 0px 0px 23px black;
+          margin-top: 10px;
         }
       }
     }
   }
 
   .starting {
-    padding: 1em 2em 8em 2em;
+    padding: 3em 2em;
     div {
       flex-direction: column-reverse !important;
       h1 {
@@ -1027,7 +1037,7 @@ $dark-blue-color: #397383;
     }
   }
   .connectivity {
-    padding: 5em 2em;
+    padding: 3em 2em;
 
     .model {
       display: none;
@@ -1056,7 +1066,7 @@ $dark-blue-color: #397383;
     }
   }
   .what_we_provide {
-    padding: 5em 2em;
+    padding: 3em 2em;
     .provide_main {
       flex-direction: column;
       div {
@@ -1095,6 +1105,9 @@ $dark-blue-color: #397383;
     padding: 3em 2em;
     .app_desc {
       width: 100%;
+      h1{
+        font-size: 50px;
+      }
       p {
         font-size: 50px;
       }
@@ -1107,7 +1120,7 @@ $dark-blue-color: #397383;
     }
   }
   .contact_us {
-    padding: 5em 2em;
+    padding: 3em 2em;
     .main {
       flex-direction: column;
       .contact {
